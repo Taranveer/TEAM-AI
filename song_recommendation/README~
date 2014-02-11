@@ -1,0 +1,32 @@
+Song Recommendation
+
+Aim
+
+To recommend similar songs given a particular song
+
+Working
+
+It invloves two parts
+
+1) function to convert json format to a csv file->make_csv.R
+2) Cluster formation -> make_cluster.R
+3) find function to find similar songs -> find.R
+
+
+1) Parsing JSON and converting it to a csv file
+Note- For the following project this function was not used to get the csv file.The data was directely extracted from Qubole(It provides Big Data as a service).However the following function can be used to convert JSON file to a csv file. The function automatically elimnates bad JSON files through trycatch function.
+
+2) Cluster formation
+
+We use Kmeans clustering algorithm to group similar songs. The clustering algorithms use the metadata to group similar songs.
+Appropriate no of clusters are decided to get minimum distance between songs.
+We get cluster Id for each song. Same songs have same cluster Id.
+
+3) find function
+
+It takes a song as an input and gives similar songs based on same cluster ID
+
+
+
+
+ 
